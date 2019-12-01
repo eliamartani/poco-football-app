@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { Results } from '../Results/'
-import { Links } from './Links/'
+import { Results } from '../../components/Results'
+import { WeekLinks } from '../../components/WeekLinks'
 
 import { setIndex } from '../../utils/parameter'
 import { fetch } from '../../services/api'
 
-import './weeks.scss'
+const API_WEEKS = '/weeks'
+
+const ROUTE_WEEKS = '/weeks/'
 
 export const Weeks = props => {
   const history = useHistory()
@@ -16,7 +18,7 @@ export const Weeks = props => {
 
   // on load
   useEffect(() => {
-    fetch('/weeks').then(response => {
+    fetch(API_WEEKS).then(response => {
       setResults(response)
     })
   }, [])
@@ -30,7 +32,7 @@ export const Weeks = props => {
 
   // handle select change
   const handleChange = event => {
-    history.push(`/weeks/${event.target.value}`)
+    history.push(`${ROUTE_WEEKS}${event.target.value}`)
   }
 
   // props
@@ -50,11 +52,11 @@ export const Weeks = props => {
         <div className='container'>
           <aside>
             <h2>Weeks</h2>
-            <Links { ...linksProps } />
+            <WeekLinks { ...linksProps } />
           </aside>
           <main>
             <h1>Results for week #{ chosenWeek + 1 }</h1>
-            <Results results={ results[chosenWeek] } />
+            <Results results={ results[ chosenWeek ] } />
           </main>
         </div>
       </div>

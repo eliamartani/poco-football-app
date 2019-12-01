@@ -27,6 +27,8 @@ const groupTeams = (teamName, weeksMatches) => weeksMatches.map(weeks => {
         opponent
       }
     }
+
+    return null
   }).filter(w => w)
 
   return match

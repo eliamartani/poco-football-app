@@ -1,5 +1,5 @@
 import React from 'react'
-import { Result } from '../Result/'
+import { Result } from './Result'
 
 export const Results = ({ results }) => {
   const resultList = results.map((result, index) => {

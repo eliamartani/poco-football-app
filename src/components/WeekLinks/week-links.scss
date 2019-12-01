@@ -1,14 +1,18 @@
-@import '../../../assets/variables';
+@import '../../assets/variables';
 
-.links {
+$box-background: #ccc;
+$box-background-hover: #aaa;
+$box-color: #fff;
+
+.week-links {
   li {
     margin-bottom: 5px;
     margin-right: 5px;
 
     & > a {
-      background: #ccc;
+      background: $box-background;
       border-radius: 5px;
-      color: #fff;
+      color: $box-color;
       display: block;
       font-size: 1rem;
       padding: 10px 0;
@@ -19,16 +23,16 @@
 
       &.active,
       &:hover {
-        background: #aaa;
+        background: $box-background-hover;
       }
     }
   }
 
   select {
-    background: #ccc;
+    background: $box-background;
     border: 0;
     border-radius: 5px;
-    color: #fff;
+    color: $box-color;
     display: none;
     font-size: 1rem;
     padding: 10px;

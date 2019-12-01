@@ -1,5 +1,7 @@
 @import '../../assets/variables';
 
+$info-color: #40bda0;
+
 .team {
   aside {
     text-align: center;
@@ -21,7 +23,7 @@
     background: transparent;
     border: 0;
     border-radius: 0;
-    color: #40bda0;
+    color: $info-color;
     display: none;
     font-size: 0.8rem;
     font-weight: bold;
@@ -35,7 +37,7 @@
   }
 
   .team-info {
-    border-top: 1px dashed #d0d0d0;
+    border-top: 1px dashed $border-color;
 
     @media only screen and (max-width: $media-smartphone) {
       overflow: hidden;

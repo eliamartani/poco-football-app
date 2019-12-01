@@ -1,19 +1,22 @@
 @import '../../assets/variables';
 
-.table {
-  table {
-    border: 0;
-    border-collapse: collapse;
-    width: 100%;
-  }
+$background-even: #f4f4f4;
+$background-odd: #fff;
+$header-color: #6c6c6c;
+$text-color: #0f5c79;
+
+.table-result {
+  border: 0;
+  border-collapse: collapse;
+  width: 100%;
 
   tbody {
     tr {
       &:nth-child(even) {
-        background: #f4f4f4;
+        background: $background-even;
       }
       &:nth-child(odd) {
-        background: #fff;
+        background: $background-odd;
       }
     }
   }
@@ -46,7 +49,7 @@
 
     &,
     a {
-      color: #0f5c79;
+      color: $text-color;
     }
 
     a {
@@ -57,7 +60,7 @@
       transition: color 0.2s;
 
       &:hover {
-        color: lighten(#0f5c79, 20%);
+        color: lighten($text-color, 20%);
       }
 
       img + span {
@@ -81,9 +84,9 @@
   }
 
   th {
-    background: #f4f4f4;
+    background: $background-even;
     box-sizing: border-box;
-    color: #6c6c6c;
+    color: $header-color;
     font-size: 0.7rem;
     padding: 20px 5px;
     text-transform: uppercase;

@@ -1,7 +1,10 @@
-@import '../../assets/variables';
+@import '../../../assets/variables';
+
+$background: #fff;
+$link-color: #0f5c79;
 
 .result {
-  background: #fff;
+  background: $background;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -23,12 +26,12 @@
   }
 
   a {
-    color: #0f5c79;
+    color: $link-color;
     text-decoration: none;
     transition: color 0.2s;
 
     &:hover {
-      color: lighten(#0f5c79, 20%);
+      color: lighten($link-color, 20%);
     }
   }
 

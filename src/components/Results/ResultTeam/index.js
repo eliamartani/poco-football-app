@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom'
 
 import './result-team.scss'
 
-const src = 'http://acor.sl.pt:7777/logos/'
+const ROUTE_TEAM = '/teams/'
+
+const SRC_IMAGE = 'http://acor.sl.pt:7777/logos/'
 
 export const ResultTeam = ({ teamId, team, score, winner }) => {
-  const image = `${ src }${ teamId }.png`
-  const url = `/teams/${ teamId }`
+  const image = `${ SRC_IMAGE }${ teamId }.png`
+  const url = `${ ROUTE_TEAM }${ teamId }`
   const winnerClass = winner ? 'winner' : ''
 
-  return <div key={ teamId } className={ `result-team ${winnerClass}` }>
+  return <div key={ teamId } className={ `result-team ${ winnerClass }` }>
     <div className='result-team-image'>
       <Link to={ url }>
         <img src={ image } alt={ team } />

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { Results } from '../Results/'
-import { TableObject } from '../TableObject'
+import { Results } from '../../components/Results'
+import { TableObject } from '../../components/TableObject'
 
 import { computeTeamStats } from '../../utils/stats/'
 import { fetch } from '../../services/api'
 
 import './team.scss'
+
+const API_TEAM = '/teams/'
 
 export const Team = props => {
   const [ team, setTeam ] = useState(null)
@@ -23,7 +25,7 @@ export const Team = props => {
   useEffect(() => {
     const index = props.match.params.index
 
-    fetch(`/teams/${index}`).then(response => {
+    fetch(`${ API_TEAM }${ index }`).then(response => {
       setTeam(response)
       setCollapse(false)
     })
@@ -49,18 +51,18 @@ export const Team = props => {
       <div className='wrapper'>
         <div className='container'>
           <aside>
-            <img src={team.logo} alt={team.name} />
-            <h1>{team.name}</h1>
+            <img src={ team.logo } alt={ team.name } />
+            <h1>{ team.name }</h1>
             <button className='toggle-info' onClick={ handleToggle }>
               { `${ collapsed ? 'Close': 'Open' } team stats` }
             </button>
             <div className={ `team-info ${ collapsed ? 'collapsed' : '' }` }>
-              <TableObject {...stats} />
+              <TableObject { ...stats } />
             </div>
           </aside>
           <main>
             <h2>Results</h2>
-            <Results results={team.results} />
+            <Results results={ team.results } />
           </main>
         </div>
       </div>

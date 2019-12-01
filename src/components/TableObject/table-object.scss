@@ -1,5 +1,7 @@
 @import '../../assets/variables';
 
+$row-color: #0f5c79;
+
 .table-object {
   border: 0;
   border-collapse: collapse;
@@ -21,7 +23,7 @@
   }
 
   td {
-    color: #0f5c79;
+    color: $row-color;
     text-align: right;
   }
 

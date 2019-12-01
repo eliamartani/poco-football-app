@@ -13,12 +13,12 @@ To run the project, you need to have Node (and NPM) installed:
 
 ## Tasks to perform
 
-    * Create the Result pure component. A winning team should have its name in bold.
-    * Make weeks start in 1 instead of zero (both visually and route-wise)
-    * Create a function returning clubs stats given a club's array of results
+* Create the Result pure component. A winning team should have its name in bold.
+* Make weeks start in 1 instead of zero (both visually and route-wise)
+* Create a function returning clubs stats given a club's array of results
 * Create a table of results
-    * Display club logos on results and team page
-    * Style it the way you best see fit
+* Display club logos on results and team page
+* Style it the way you best see fit
 * Feel free to restructure/clean/test the code to best serve your solution
 
 

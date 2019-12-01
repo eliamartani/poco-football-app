@@ -1,4 +1,4 @@
-export const setModel = ({ length }) => ({
+export const setModel = ({ length = 0 }) => ({
   'Points': 0,
   'Goals': 0,
   'Goals Conceded': 0,

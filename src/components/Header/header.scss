@@ -1,7 +1,11 @@
 @import '../../assets/variables';
 
+$background: #fff;
+$link-color: #000;
+$brand-color: #40bda0;
+
 .header {
-  background: #fff;
+  background: $background;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 3rem;
 
@@ -9,11 +13,14 @@
     margin-bottom: 2rem;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   li {
     & > a {
-      color: #000;
+      color: $link-color;
       font-size: 1rem;
-      text-decoration: none;
       text-transform: uppercase;
 
       @media only screen and (max-width: $media-smartphone) {
@@ -58,11 +65,7 @@
       }
 
       &, a {
-        color: #40bda0;
-      }
-
-      a {
-        text-decoration: none;
+        color: $brand-color;
       }
     }
 

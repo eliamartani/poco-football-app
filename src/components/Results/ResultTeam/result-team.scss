@@ -1,5 +1,8 @@
 @import '../../../assets/variables';
 
+$score-color: #ea6b6b;
+$score-winning-color: #55ab3f;
+
 .result-team {
   align-items: center;
   display: flex;
@@ -17,7 +20,7 @@
     }
 
     .result-team-score {
-      color: #55ab3f;
+      color: $score-winning-color;
     }
   }
 
@@ -42,8 +45,8 @@
   }
 
   .result-team-score {
-    color: #ea6b6b;
-    border: 1px solid #ddd;
+    color: $score-color;
+    border: 1px solid $border-color;
     border-radius: 50%;
     font-size: 1.5rem;
     height: 48px;
@@ -57,9 +60,6 @@
 
     @media only screen and (max-width: $media-smartphone) {
       font-size: 0.8rem;
-    }
-
-    @media only screen and (max-width: $media-smartphone) {
       height: 38px;
       line-height: 38px;
       width: 38px;

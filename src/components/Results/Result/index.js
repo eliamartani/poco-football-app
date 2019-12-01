@@ -1,7 +1,7 @@
 import React from 'react'
-import { ResultTeam } from './ResultTeam/'
+import { ResultTeam } from '../ResultTeam'
 
-import { getResult } from '../../utils/result/'
+import { getResult } from '../../../utils/result'
 
 import './result.scss'
 
