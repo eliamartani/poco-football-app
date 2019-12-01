@@ -1,0 +1,51 @@
+@import '../../assets/variables';
+
+.team {
+  aside {
+    text-align: center;
+
+    & > img {
+      height: 100px;
+      margin-bottom: 1rem;
+      width: 100px;
+
+      @media only screen and (max-width: $media-smartphone) {
+        height: 70px;
+        width: 70px;
+      }
+    }
+  }
+
+  .toggle-info {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: #40bda0;
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $media-smartphone) {
+      display: inline-block;
+    }
+  }
+
+  .team-info {
+    border-top: 1px dashed #d0d0d0;
+
+    @media only screen and (max-width: $media-smartphone) {
+      overflow: hidden;
+      position: relative;
+
+      &.collapsed {
+        .table-object {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

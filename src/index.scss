@@ -1,0 +1,61 @@
+@import './assets/variables';
+@import './assets/container';
+
+*, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  padding-bottom: 2rem;
+
+  @media only screen and (max-width: $media-tablet) {
+    padding-bottom: 1rem;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  @media only screen and (max-width: $media-tablet) {
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: $media-smartphone) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: $media-smaller-smartphone) {
+    font-size: 1.2rem;
+  }
+}
+
+h2 {
+  margin-bottom: 1rem;
+
+  @media only screen and (max-width: $media-smartphone) {
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: $media-smaller-smartphone) {
+    font-size: 1rem;
+  }
+}
+
+ul.unstyled {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    font-size: 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}

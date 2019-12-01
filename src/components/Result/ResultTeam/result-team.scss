@@ -1,0 +1,129 @@
+@import '../../../assets/variables';
+
+.result-team {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 50%;
+
+  @media only screen and (max-width: $media-tablet) {
+    width: 100%;
+  }
+
+  &.winner {
+    .result-team-name {
+      font-weight: bold;
+    }
+
+    .result-team-score {
+      color: #55ab3f;
+    }
+  }
+
+  .result-team-image {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .result-team-name {
+    font-size: 1.3rem;
+    max-width: 260px;
+
+    @media only screen and (max-width: $media-tablet) {
+      font-size: 1rem;
+    }
+
+    @media only screen and (max-width: $media-smartphone) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .result-team-score {
+    color: #ea6b6b;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 48px;
+
+    @media only screen and (max-width: $media-tablet) {
+      font-size: 1rem;
+    }
+
+    @media only screen and (max-width: $media-smartphone) {
+      font-size: 0.8rem;
+    }
+
+    @media only screen and (max-width: $media-smartphone) {
+      height: 38px;
+      line-height: 38px;
+      width: 38px;
+    }
+  }
+
+  &:nth-child(1) {
+    padding-right: 20px;
+
+    @media only screen and (max-width: $media-tablet) {
+      padding-right: 0;
+    }
+
+    .result-team-image {
+      margin-right: 1rem;
+
+      @media only screen and (max-width: $media-tablet) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .result-team-name {
+      margin-right: auto;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-left: auto;
+    padding-left: 20px;
+
+    @media only screen and (max-width: $media-tablet) {
+      margin-top: 1rem;
+      padding-left: 0;
+    }
+
+    .result-team-image {
+      margin-left: 1rem;
+      order: 2;
+
+      @media only screen and (max-width: $media-tablet) {
+        margin-left: 0;
+        margin-right: 0.5rem;
+        order: 0;
+      }
+    }
+
+    .result-team-name {
+      margin-left: auto;
+      order: 1;
+      text-align: right;
+
+      @media only screen and (max-width: $media-tablet) {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+      }
+    }
+
+    .result-team-score {
+      order: 0;
+
+      @media only screen and (max-width: $media-tablet) {
+        order: 2;
+      }
+    }
+  }
+}

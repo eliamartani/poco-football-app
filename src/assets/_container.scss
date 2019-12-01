@@ -1,0 +1,30 @@
+@import './assets/variables';
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: $media-smartphone) {
+    flex-direction: column;
+  }
+
+  & > aside {
+    box-sizing: border-box;
+    padding-right: 30px;
+    width: 300px;
+
+    @media only screen and (max-width: $media-tablet) {
+      width: 210px;
+    }
+
+    @media only screen and (max-width: $media-smartphone) {
+      margin-bottom: 1rem;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
+  & > main {
+    flex: auto;
+  }
+}

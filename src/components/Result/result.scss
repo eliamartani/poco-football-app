@@ -1,0 +1,42 @@
+@import '../../assets/variables';
+
+.result {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  transition: box-shadow 0.2s;
+
+  @media only screen and (max-width: $media-tablet) {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: $media-smartphone) {
+    padding: 1rem;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  a {
+    color: #0f5c79;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: lighten(#0f5c79, 20%);
+    }
+  }
+
+  & + .result {
+    margin-top: 2rem;
+
+    @media only screen and (max-width: $media-tablet) {
+      margin-top: 1rem;
+    }
+  }
+}

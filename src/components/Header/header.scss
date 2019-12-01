@@ -1,0 +1,73 @@
+@import '../../assets/variables';
+
+.header {
+  background: #fff;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+
+  @media only screen and (max-width: $media-smartphone) {
+    margin-bottom: 2rem;
+  }
+
+  li {
+    & > a {
+      color: #000;
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: $media-smartphone) {
+        font-size: 0.8rem;
+      }
+
+      &.active,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & + li {
+      margin-left: 2rem;
+
+      @media only screen and (max-width: $media-smartphone) {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  ul {
+    text-align: right;
+  }
+
+  .header-container {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+
+    @media only screen and (max-width: $media-smartphone) {
+      padding: 1.5rem 0;
+    }
+
+    .brand {
+      font-size: 2rem;
+      font-weight: bold;
+
+      @media only screen and (max-width: $media-smartphone) {
+        font-size: 1.2rem;
+      }
+
+      &, a {
+        color: #40bda0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    nav {
+      margin-left: auto;
+    }
+  }
+}

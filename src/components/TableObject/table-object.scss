@@ -1,0 +1,40 @@
+@import '../../assets/variables';
+
+.table-object {
+  border: 0;
+  border-collapse: collapse;
+  margin: 1rem auto 0;
+  width: 100%;
+
+  @media only screen and (max-width: $media-tablet) {
+    max-width: 400px;
+  }
+
+  @media only screen and (max-width: $media-smartphone) {
+    margin-top: -100%;
+    transition: margin-top 0.5s;
+  }
+
+  td,
+  th {
+    padding: 0 10px 10px;
+  }
+
+  td {
+    color: #0f5c79;
+    text-align: right;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  tr {
+    &:last-child {
+      td,
+      th {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
