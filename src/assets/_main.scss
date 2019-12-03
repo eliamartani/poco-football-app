@@ -6,10 +6,10 @@
 
 body {
   background: #f9f9f9;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 
   @media only screen and (max-width: $media-tablet) {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 }
 

@@ -8,8 +8,12 @@
     flex-direction: column;
   }
 
-  & > aside {
+  & > aside,
+  & > main {
     box-sizing: border-box;
+  }
+
+  & > aside {
     padding-right: 30px;
     width: 300px;
 
