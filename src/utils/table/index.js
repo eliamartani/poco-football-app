@@ -2,7 +2,7 @@ import { findByValue } from '../find/'
 import { getMatch } from '../match'
 import { getResult } from '../result/'
 
-const getTableResult = (teams, weeksMatches) => {
+export const getTableResult = (teams, weeksMatches) => {
   const tableResult = {}
 
   // create an empty array for each team
@@ -37,7 +37,7 @@ const getTableResult = (teams, weeksMatches) => {
   return tableResult
 }
 
-const getTeamsResult = matchesPerTeam => {
+export const getTeamsResult = matchesPerTeam => {
   const teamsResult = []
 
   for (const teamName in matchesPerTeam) {
