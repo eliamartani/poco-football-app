@@ -24,7 +24,7 @@ To run the project, you need to have Node (and NPM) installed:
 
 ## API
 
-## League Rules
+### League Rules
 
 <https://en.wikipedia.org/wiki/Premier_League#Competition_format>
 * wins are awarded 3 points, draws 1 and losses 0
