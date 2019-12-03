@@ -3,7 +3,7 @@ import { getMatch } from '../match'
 import { getResult } from '../result/'
 
 const getTableResult = (teams, weeksMatches) => {
-  var tableResult = {}
+  const tableResult = {}
 
   // create an empty array for each team
   for (const key in teams) {
