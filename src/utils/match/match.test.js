@@ -21,9 +21,13 @@ describe('match.js', () => {
 
   it('should respect object\'s order', () => {
     const [ team, opponent ] = getMatch(game)
+    const parsedTeam = JSON.stringify(team)
+    const parsedExpectedTeam = JSON.stringify(expectedTeam)
+    const parsedOpponent = JSON.stringify(opponent)
+    const parsedExpectedOpponent = JSON.stringify(expectedOpponent)
 
-    expect(JSON.stringify(team)).toBe(JSON.stringify(expectedTeam))
-    expect(JSON.stringify(opponent)).toBe(JSON.stringify(expectedOpponent))
+    expect(parsedTeam).toBe(parsedExpectedTeam)
+    expect(parsedOpponent).toBe(parsedExpectedOpponent)
   })
 
   it('should throw an error when no parameter given', () => {
