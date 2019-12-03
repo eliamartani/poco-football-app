@@ -1,34 +1,35 @@
 import { findByValue } from '../find/'
-import { setModel } from './model'
-import { computeValue } from '../value/'
+import { getMatch } from '../match'
+import { getResult } from '../result'
 
 // TASK #3 - compute team stats
 export const computeTeamStats = ({id, results}) => {
   const idParsed = parseInt(id, 10)
-  const model = setModel(results)
+  const model = {
+    matches: 0,
+    points: 0,
+    won: 0,
+    drawn: 0,
+    lost: 0,
+    goals: 0,
+    goalsConceded: 0,
+    goalsDifference: 0
+  }
 
-  const result = results.reduce((current, match) => {
-    const {
+  results.forEach(result => {
+    const [
       indexTeam,
       indexOpponent
-    } = findByValue(match.teamIds, idParsed)
+    ] = findByValue(result.teamIds, idParsed)
+    const match = getMatch(result)
+    const team = match[indexTeam]
+    const opponent = match[indexOpponent]
+    const matchResult = getResult(team, opponent)
 
-    const score = match.score[indexTeam]
-    const scoreOpponent = match.score[indexOpponent]
+    for (const key in matchResult) {
+      model[key] += matchResult[key]
+    }
+  })
 
-    const win = score > scoreOpponent
-    const draw = score === scoreOpponent
-    const lose = score < scoreOpponent
-
-    current['Goals'] += score
-    current['Goals Conceded'] += scoreOpponent
-    current['Wins'] += computeValue(win)
-    current['Draws'] += computeValue(draw)
-    current['Losses'] += computeValue(lose)
-    current['Points'] += computeValue(win, 3) || computeValue(draw, 1)
-
-    return current
-  }, model)
-
-  return result
+  return model
 }

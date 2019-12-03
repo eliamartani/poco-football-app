@@ -1,11 +1,9 @@
-import { computeValue } from '../value/'
-
 export const findByValue = (teams, value) => {
   const indexTeam =  teams.indexOf(value)
-  const indexOpponent = computeValue(indexTeam === 0)
+  const indexOpponent = indexTeam === 0 ? 1 : 0
 
-  return {
+  return [
     indexTeam,
     indexOpponent
-  }
+  ]
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const API_IMAGE = 'http://acor.sl.pt:7777/logos/'
+
 const ROUTE_TEAM = '/teams/'
 
-const SRC_IMAGE = 'http://acor.sl.pt:7777/logos/'
-
 export const TableResultRows = ({ table }) => table.map((result, index) => {
-  const image = `${ SRC_IMAGE }${ result.teamId }.png`
+  const image = `${ API_IMAGE }${ result.teamId }`
   const url = `${ ROUTE_TEAM }${ result.teamId }`
   const position = index + 1
 

@@ -5,7 +5,7 @@ const API_ENDPOINT = 'http://acor.sl.pt:7777'
 export const fetch = (path) => {
   return new Promise((resolve, reject) => {
     superagent(`${API_ENDPOINT}${path}`).end((err, res) => {
-      if (res.ok) {
+      if (!err && res.ok) {
         return resolve(res.body)
       }
 

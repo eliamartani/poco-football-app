@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 import './result-team.scss'
 
+const API_IMAGE = 'http://acor.sl.pt:7777/logos/'
+
 const ROUTE_TEAM = '/teams/'
 
-const SRC_IMAGE = 'http://acor.sl.pt:7777/logos/'
-
 export const ResultTeam = ({ teamId, team, score, winner }) => {
-  const image = `${ SRC_IMAGE }${ teamId }.png`
+  const image = `${ API_IMAGE }${ teamId }`
   const url = `${ ROUTE_TEAM }${ teamId }`
   const winnerClass = winner ? 'winner' : ''
 
