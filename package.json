@@ -1,5 +1,6 @@
 {
-  "name": "react-challenge",
+  "homepage": "http://eliamartani.github.io/react-football-app",
+  "name": "react-football-app",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
