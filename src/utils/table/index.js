@@ -1,47 +1,44 @@
-import { findByValue } from '../find/'
-import { getMatch } from '../match'
-import { getResult } from '../result/'
+import { findByValue } from '../find/';
+import { getMatch } from '../match';
+import { getResult } from '../result/';
 
 export const getTableResult = (teams, weeksMatches) => {
-  const tableResult = {}
+  const tableResult = {};
 
   // create an empty array for each team
   for (const key in teams) {
-    tableResult[teams[key]] = []
+    tableResult[teams[key]] = [];
   }
 
   for (const key in weeksMatches) {
-    const matches = weeksMatches[key]
+    const matches = weeksMatches[key];
 
     for (const matchIndex in matches) {
-      const result = matches[matchIndex]
-      const match = getMatch(result)
+      const result = matches[matchIndex];
+      const match = getMatch(result);
 
       for (const teamIndex in result.teams) {
-        const teamName = result.teams[teamIndex]
-        const [
-          indexTeam,
-          indexOpponent
-        ] = findByValue(result.teams, teamName)
-        const team = match[indexTeam]
-        const opponent = match[indexOpponent]
+        const teamName = result.teams[teamIndex];
+        const [indexTeam, indexOpponent] = findByValue(result.teams, teamName);
+        const team = match[indexTeam];
+        const opponent = match[indexOpponent];
 
         tableResult[teamName].push({
           team,
-          opponent
-        })
+          opponent,
+        });
       }
     }
   }
 
-  return tableResult
-}
+  return tableResult;
+};
 
 export const getTeamsResult = matchesPerTeam => {
-  const teamsResult = []
+  const teamsResult = [];
 
   for (const teamName in matchesPerTeam) {
-    const matches = matchesPerTeam[teamName]
+    const matches = matchesPerTeam[teamName];
     const model = {
       drawn: 0,
       goals: 0,
@@ -52,35 +49,35 @@ export const getTeamsResult = matchesPerTeam => {
       points: 0,
       teamId: matches[0].team.teamId,
       teamName,
-      won: 0
-    }
+      won: 0,
+    };
 
     for (const matchIndex in matches) {
-      const match = matches[matchIndex]
-      const result = getResult(match.team, match.opponent)
+      const match = matches[matchIndex];
+      const result = getResult(match.team, match.opponent);
 
       for (const key in result) {
-        model[key] += result[key]
+        model[key] += result[key];
       }
     }
 
-    teamsResult.push(model)
+    teamsResult.push(model);
   }
 
-  return teamsResult
-}
+  return teamsResult;
+};
 
 // TASK #4 - create a table of results
 export const computeTable = (teams, weeksMatches) => {
-  const matchesPerTeam = getTableResult(teams, weeksMatches)
-  const teamsResult = getTeamsResult(matchesPerTeam)
+  const matchesPerTeam = getTableResult(teams, weeksMatches);
+  const teamsResult = getTeamsResult(matchesPerTeam);
   const orderedResult = teamsResult.sort((a, b) => {
-    const byPoints = b.points - a.points
-    const byGoalsDifference = b.goalsDifference - a.goalsDifference
-    const byGoalsScored = b.goals - a.goals
+    const byPoints = b.points - a.points;
+    const byGoalsDifference = b.goalsDifference - a.goalsDifference;
+    const byGoalsScored = b.goals - a.goals;
 
-    return byPoints || byGoalsDifference || byGoalsScored
-  })
+    return byPoints || byGoalsDifference || byGoalsScored;
+  });
 
-  return orderedResult
-}
+  return orderedResult;
+};

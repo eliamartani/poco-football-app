@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Main } from './containers/Main/'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Main } from './containers/Main/';
 
-import './index.scss'
+import './index.scss';
 
-const mountNode = document.querySelector('#root')
+const mountNode = document.querySelector('#root');
 
-ReactDOM.render(<Main />, mountNode)
+ReactDOM.render(<Main />, mountNode);

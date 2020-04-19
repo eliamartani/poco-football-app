@@ -64,7 +64,8 @@ $brand-color: #40bda0;
         font-size: 1.2rem;
       }
 
-      &, a {
+      &,
+      a {
         color: $brand-color;
       }
     }

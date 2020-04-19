@@ -2,8 +2,8 @@
 
 ## API
 
-> http://acor.sl.pt:7777
+> https://football-server.now.sh/
 
 ## Sample
 
-https://eliamartani.github.io/react-football-app/
+https://eliamartani.github.io/poco-football-app/
