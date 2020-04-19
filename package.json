@@ -1,6 +1,6 @@
 {
-  "homepage": "http://eliamartani.github.io/react-football-app",
-  "name": "react-football-app",
+  "homepage": "http://eliamartani.github.io/poco-football-app",
+  "name": "poco-football-app",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

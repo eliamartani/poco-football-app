@@ -1,14 +1,14 @@
-import React from 'react'
-import { TableObjectRows } from './TableObjectRows'
+import React from 'react';
+import { TableObjectRows } from './TableObjectRows';
 
-import './table-object.scss'
+import './table-object.scss';
 
 export const TableObject = rows => {
   return (
-    <table className='table-object'>
+    <table className="table-object">
       <tbody>
-        <TableObjectRows rows={ rows } />
+        <TableObjectRows rows={rows} />
       </tbody>
     </table>
-  )
-}
+  );
+};

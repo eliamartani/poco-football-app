@@ -1,28 +1,35 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import './header.scss'
+import './header.scss';
 
 export const Header = () => (
-  <header className='header'>
-    <div className='wrapper'>
-      <div className='header-container'>
-        <div className='brand'>
-          <NavLink to='/'>
-            <span role='img' aria-label='football'>⚽️</span> League App
+  <header className="header">
+    <div className="wrapper">
+      <div className="header-container">
+        <div className="brand">
+          <NavLink to="/">
+            <span role="img" aria-label="football">
+              ⚽️
+            </span>{' '}
+            League App
           </NavLink>
         </div>
         <nav>
-          <ul className='unstyled'>
+          <ul className="unstyled">
             <li>
-              <NavLink activeClassName='active' to='/table'>table</NavLink>
+              <NavLink activeClassName="active" to="/table">
+                table
+              </NavLink>
             </li>
             <li>
-              <NavLink activeClassName='active' to='/weeks'>weeks</NavLink>
+              <NavLink activeClassName="active" to="/weeks">
+                weeks
+              </NavLink>
             </li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-)
+);
