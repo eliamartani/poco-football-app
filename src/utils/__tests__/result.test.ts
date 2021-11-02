@@ -1,4 +1,5 @@
 import { getResult } from "../";
+import { Match } from "../../interfaces";
 
 describe("result.js", () => {
   const team = {
@@ -26,14 +27,8 @@ describe("result.js", () => {
     expect(result.goalsDifference).toBe(-10);
   });
 
-  it("should throw an error when no parameter given", () => {
-    expect(() => {
-      getResult();
-    }).toThrow();
-  });
-
   it("should receive empty parameters", () => {
-    const result = getResult({}, {});
+    const result = getResult({} as Match, {} as Match);
 
     expect(result.matches).toBe(1);
     expect(result.points).toBe(1);

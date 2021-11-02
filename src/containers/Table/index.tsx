@@ -1,5 +1,5 @@
 // libraries
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // components
 import Loading from "../../components/Loading";

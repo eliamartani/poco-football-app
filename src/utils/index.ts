@@ -1,7 +1,7 @@
-import { Game, Match, Matches, MatchResult, Team, TeamMatches, ValueRef } from "../interfaces";
+import { Match, Matches, MatchResult, Team, TeamMatches, ValueRef } from "../interfaces";
 
-export const findByValue = (teams: ValueRef[], value: ValueRef) => {
-  const indexTeam = teams.indexOf(value);
+export const findByValue = (teams: ValueRef[], value?: ValueRef) => {
+  const indexTeam = value ? teams.indexOf(value) : -1;
   const indexOpponent = indexTeam === 0 ? 1 : 0;
 
   return [indexTeam, indexOpponent];

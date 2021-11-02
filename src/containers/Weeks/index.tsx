@@ -1,5 +1,5 @@
 // libraries
-import { ChangeEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { RouteComponentProps, useHistory } from "react-router-dom";
 
 // components
@@ -20,7 +20,6 @@ const Weeks = ({ match }: RouteComponentProps<RouterParams>) => {
   const history = useHistory();
   const index = setIndex(match.params.index);
 
-  const [loading, setLoading] = useState(true);
   const [results, setResults] = useState<Matches[][]>();
   const [chosenWeek, setChosenWeek] = useState(index);
 
@@ -42,10 +41,6 @@ const Weeks = ({ match }: RouteComponentProps<RouterParams>) => {
     setChosenWeek(index);
   }, [match.params.index]);
 
-  if (!results?.length ?? 0) {
-    return <Loading />;
-  }
-
   // props
   const linksProps: WeekLink = {
     chosenWeek: chosenWeek + 1,
@@ -55,6 +50,10 @@ const Weeks = ({ match }: RouteComponentProps<RouterParams>) => {
     handleChange,
   };
   const matches: Matches[] = results?.[chosenWeek] ?? [];
+
+  if (!results?.length ?? 0) {
+    return <Loading />;
+  }
 
   return (
     <div className="weeks">

@@ -1,7 +1,7 @@
 import { computeTeamStats } from "../";
 
 describe("stats.js", () => {
-  const id = 1;
+  const id = "1";
   const results = [
     {
       teams: ["a", "b"],
@@ -50,12 +50,6 @@ describe("stats.js", () => {
     expect(stats.goalsDifference).toBe(-5);
   });
 
-  it("should throw an error when no parameter given", () => {
-    expect(() => {
-      computeTeamStats();
-    }).toThrow();
-  });
-
   it("should throw an error when no id found", () => {
     expect(() => {
       computeTeamStats({ id: "a", results });
@@ -65,7 +59,7 @@ describe("stats.js", () => {
   it("should throw an error when inserting an id that's not present in every array object", () => {
     expect(() => {
       const parameter = {
-        id: 2,
+        id: "2",
         results: results,
       };
       computeTeamStats(parameter);
@@ -74,7 +68,7 @@ describe("stats.js", () => {
 
   it("should return opponent stats", () => {
     const parameter = {
-      id: 2,
+      id: "2",
       results: resultsTeam2,
     };
     const stats = computeTeamStats(parameter);

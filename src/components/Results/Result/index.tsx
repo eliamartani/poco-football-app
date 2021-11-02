@@ -1,3 +1,6 @@
+// libraries
+import React from "react";
+
 // components
 import ResultTeam from "../ResultTeam";
 

@@ -24,13 +24,6 @@ describe("find.js", () => {
     expect(val2).toBe(0);
   });
 
-  it("should return -1 and 0 consecutively when value is null", () => {
-    const [val1, val2] = findByValue(teams, null);
-
-    expect(val1).toBe(-1);
-    expect(val2).toBe(0);
-  });
-
   it("should return -1 and 0 consecutively when value is other type", () => {
     const [val1, val2] = findByValue(teams, "string");
 

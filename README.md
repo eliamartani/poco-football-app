@@ -31,6 +31,7 @@ These are the available commands to run within the project
 | `lint:prettier` | Format files respecting the stablished code styling by Prettier |
 | `serve`         | Runs the built project                                          |
 | `start`         | Run the project in dev mode                                     |
+| `test`          | Run unit tests                                                  |
 
 All these commands can be executed with
 

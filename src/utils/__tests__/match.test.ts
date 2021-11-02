@@ -30,12 +30,6 @@ describe("match.js", () => {
     expect(parsedOpponent).toBe(parsedExpectedOpponent);
   });
 
-  it("should throw an error when no parameter given", () => {
-    expect(() => {
-      getMatch();
-    }).toThrow();
-  });
-
   it("should return empty values when empty", () => {
     const parameter = {
       teams: [],

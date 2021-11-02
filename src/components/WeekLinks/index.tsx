@@ -1,3 +1,6 @@
+// libraries
+import React from "react";
+
 // components
 import WeekLinksList from "./WeekLinksList";
 import WeekLinksSelect from "./WeekLinksSelect";

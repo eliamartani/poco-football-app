@@ -1,3 +1,6 @@
+// libraries
+import React from "react";
+
 // components
 import TableObjectRows from "./TableObjectRows";
 
