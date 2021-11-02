@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../styles/global";
 
 $background: #fff;
 $link-color: #000;
@@ -9,7 +9,7 @@ $brand-color: #40bda0;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 3rem;
 
-  @media only screen and (max-width: $media-smartphone) {
+  @include media-query($media-smartphone) {
     margin-bottom: 2rem;
   }
 
@@ -23,7 +23,7 @@ $brand-color: #40bda0;
       font-size: 1rem;
       text-transform: uppercase;
 
-      @media only screen and (max-width: $media-smartphone) {
+      @include media-query($media-smartphone) {
         font-size: 0.8rem;
       }
 
@@ -36,7 +36,7 @@ $brand-color: #40bda0;
     & + li {
       margin-left: 2rem;
 
-      @media only screen and (max-width: $media-smartphone) {
+      @include media-query($media-smartphone) {
         margin-left: 1rem;
       }
     }
@@ -52,7 +52,7 @@ $brand-color: #40bda0;
     flex-direction: row;
     padding: 2rem 0;
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       padding: 1.5rem 0;
     }
 
@@ -60,7 +60,7 @@ $brand-color: #40bda0;
       font-size: 2rem;
       font-weight: bold;
 
-      @media only screen and (max-width: $media-smartphone) {
+      @include media-query($media-smartphone) {
         font-size: 1.2rem;
       }
 

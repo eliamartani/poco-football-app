@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../styles/global";
 
 $box-background: #ccc;
 $box-background-hover: #aaa;
@@ -38,13 +38,13 @@ $box-color: #fff;
     padding: 10px;
     width: 100%;
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       display: block;
     }
   }
 
   ul {
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       display: none;
     }
   }

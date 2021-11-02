@@ -1,0 +1,59 @@
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #f9f9f9;
+  font-size: 16px;
+  padding-bottom: 4rem;
+
+  @include media-query($media-tablet) {
+    padding-bottom: 2rem;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  @include media-query($media-tablet) {
+    font-size: 1.8rem;
+  }
+
+  @include media-query($media-smartphone) {
+    font-size: 1.5rem;
+  }
+
+  @include media-query($media-smaller-smartphone) {
+    font-size: 1.2rem;
+  }
+}
+
+h2 {
+  margin-bottom: 1rem;
+
+  @include media-query($media-smartphone) {
+    font-size: 1.3rem;
+  }
+
+  @include media-query($media-smaller-smartphone) {
+    font-size: 1rem;
+  }
+}
+
+ul.unstyled {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    font-size: 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}

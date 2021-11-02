@@ -1,4 +1,4 @@
-@import '../../../assets/variables';
+@import "../../../styles/global";
 
 $score-color: #ea6b6b;
 $score-winning-color: #55ab3f;
@@ -10,7 +10,7 @@ $score-winning-color: #55ab3f;
   position: relative;
   width: 50%;
 
-  @media only screen and (max-width: $media-tablet) {
+  @include media-query($media-tablet) {
     width: 100%;
   }
 
@@ -35,11 +35,11 @@ $score-winning-color: #55ab3f;
     font-size: 1.3rem;
     max-width: 260px;
 
-    @media only screen and (max-width: $media-tablet) {
+    @include media-query($media-tablet) {
       font-size: 1rem;
     }
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       font-size: 0.8rem;
     }
   }
@@ -54,11 +54,11 @@ $score-winning-color: #55ab3f;
     text-align: center;
     width: 48px;
 
-    @media only screen and (max-width: $media-tablet) {
+    @include media-query($media-tablet) {
       font-size: 1rem;
     }
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       font-size: 0.8rem;
       height: 38px;
       line-height: 38px;
@@ -69,14 +69,14 @@ $score-winning-color: #55ab3f;
   &:nth-child(1) {
     padding-right: 20px;
 
-    @media only screen and (max-width: $media-tablet) {
+    @include media-query($media-tablet) {
       padding-right: 0;
     }
 
     .result-team-image {
       margin-right: 1rem;
 
-      @media only screen and (max-width: $media-tablet) {
+      @include media-query($media-tablet) {
         margin-right: 0.5rem;
       }
     }
@@ -90,7 +90,7 @@ $score-winning-color: #55ab3f;
     margin-left: auto;
     padding-left: 20px;
 
-    @media only screen and (max-width: $media-tablet) {
+    @include media-query($media-tablet) {
       margin-top: 1rem;
       padding-left: 0;
     }
@@ -99,7 +99,7 @@ $score-winning-color: #55ab3f;
       margin-left: 1rem;
       order: 2;
 
-      @media only screen and (max-width: $media-tablet) {
+      @include media-query($media-tablet) {
         margin-left: 0;
         margin-right: 0.5rem;
         order: 0;
@@ -111,7 +111,7 @@ $score-winning-color: #55ab3f;
       order: 1;
       text-align: right;
 
-      @media only screen and (max-width: $media-tablet) {
+      @include media-query($media-tablet) {
         margin-left: 0;
         margin-right: auto;
         text-align: left;
@@ -121,7 +121,7 @@ $score-winning-color: #55ab3f;
     .result-team-score {
       order: 0;
 
-      @media only screen and (max-width: $media-tablet) {
+      @include media-query($media-tablet) {
         order: 2;
       }
     }

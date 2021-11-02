@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../styles/global";
 
 $background-even: #f4f4f4;
 $background-odd: #fff;
@@ -26,7 +26,7 @@ $text-color: #0f5c79;
   th {
     text-align: center;
 
-    @media only screen and (max-width: $media-smaller-smartphone) {
+    @include media-query($media-smaller-smartphone) {
       &:nth-child(1) {
         display: none;
       }
@@ -40,11 +40,11 @@ $text-color: #0f5c79;
   td {
     padding: 8px 5px;
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       font-size: 0.8rem;
     }
 
-    @media only screen and (max-width: $media-smaller-smartphone) {
+    @include media-query($media-smaller-smartphone) {
       font-size: 0.7rem;
     }
 
@@ -67,7 +67,7 @@ $text-color: #0f5c79;
       img + span {
         margin-left: 1rem;
 
-        @media only screen and (max-width: $media-smartphone) {
+        @include media-query($media-smartphone) {
           margin-left: 0.5rem;
         }
       }
@@ -77,7 +77,7 @@ $text-color: #0f5c79;
       height: 25px;
       width: 25px;
 
-      @media only screen and (max-width: $media-smartphone) {
+      @include media-query($media-smartphone) {
         height: 15px;
         width: 15px;
       }
@@ -93,7 +93,7 @@ $text-color: #0f5c79;
     text-transform: uppercase;
     width: 100px;
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       width: 60px;
 
       span {

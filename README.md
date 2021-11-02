@@ -1,9 +1,39 @@
-# React Football App
+# Assignment
 
-## API
+## Stack
 
-> https://football-server.now.sh/
+- HTML5
+- SCSS
+- React 17
 
-## Sample
+## Requirement
 
-https://eliamartani.github.io/poco-football-app/
+- NodeJs 14
+
+## Install
+
+First, clone this project
+
+Then execute the following command to install the project
+
+```bash
+npm install
+```
+
+## Running the project
+
+These are the available commands to run within the project
+
+| Command         | Description                                                     |
+| --------------- | --------------------------------------------------------------- |
+| `build`         | Compile the `src` folder and publish into `dist` folder         |
+| `lint`          | Validates and fix files respecting the stablished code styling  |
+| `lint:prettier` | Format files respecting the stablished code styling by Prettier |
+| `serve`         | Runs the built project                                          |
+| `start`         | Run the project in dev mode                                     |
+
+All these commands can be executed with
+
+```bash
+npm run { command }
+```

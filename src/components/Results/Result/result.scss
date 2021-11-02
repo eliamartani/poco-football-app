@@ -1,4 +1,4 @@
-@import '../../../assets/variables';
+@import "../../../styles/global";
 
 $background: #fff;
 $link-color: #0f5c79;
@@ -12,12 +12,12 @@ $link-color: #0f5c79;
   padding: 2rem;
   transition: box-shadow 0.2s;
 
-  @media only screen and (max-width: $media-tablet) {
+  @include media-query($media-tablet) {
     flex-direction: column;
     padding: 1.5rem;
   }
 
-  @media only screen and (max-width: $media-smartphone) {
+  @include media-query($media-smartphone) {
     padding: 1rem;
   }
 
@@ -38,7 +38,7 @@ $link-color: #0f5c79;
   & + .result {
     margin-top: 2rem;
 
-    @media only screen and (max-width: $media-tablet) {
+    @include media-query($media-tablet) {
       margin-top: 1rem;
     }
   }

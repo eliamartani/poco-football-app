@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../styles/global";
 
 $row-color: #0f5c79;
 
@@ -8,11 +8,11 @@ $row-color: #0f5c79;
   margin: 1rem auto 0;
   width: 100%;
 
-  @media only screen and (max-width: $media-tablet) {
+  @include media-query($media-tablet) {
     max-width: 400px;
   }
 
-  @media only screen and (max-width: $media-smartphone) {
+  @include media-query($media-smartphone) {
     margin-top: -100%;
     transition: margin-top 0.5s;
   }

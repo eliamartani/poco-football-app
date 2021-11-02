@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../styles/global";
 
 $info-color: #40bda0;
 
@@ -11,7 +11,7 @@ $info-color: #40bda0;
       margin-bottom: 1rem;
       width: 100px;
 
-      @media only screen and (max-width: $media-smartphone) {
+      @include media-query($media-smartphone) {
         height: 70px;
         width: 70px;
       }
@@ -31,7 +31,7 @@ $info-color: #40bda0;
     text-decoration: none;
     text-transform: uppercase;
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       display: inline-block;
     }
   }
@@ -39,7 +39,7 @@ $info-color: #40bda0;
   .team-info {
     border-top: 1px dashed $border-color;
 
-    @media only screen and (max-width: $media-smartphone) {
+    @include media-query($media-smartphone) {
       overflow: hidden;
       position: relative;
 
